@@ -9,5 +9,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+  // Redirect all 404s to index.html
+  if (location.pathname !== '/' && !location.pathname.includes('.')) {
+    location.replace('/');
+  }
+</script>
+
   </body>
 </html>
